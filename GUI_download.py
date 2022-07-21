@@ -85,7 +85,8 @@ combo2.current(1)
 combo2.grid(column=2, row=3)
 
 def open_dir():
-    subprocess.Popen(r'explorer /select,"C:\"')
+    path = os.path.abspath('G_Download')
+    subprocess.Popen(f'explorer /select, "{path}"')
 
 btn = Button(
     window, 
